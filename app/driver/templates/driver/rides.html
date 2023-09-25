@@ -1,0 +1,26 @@
+{% extends 'driver/driverBase.html' %}
+
+{% block driverContent %}
+
+{% if requestList %}
+     
+     {% for request in requestList %}
+         <div>
+            <h1>{{ request.date|date:"F d, Y" }}</h1>
+            <p>{{ request.destination}}</p> 
+            {% if request.tip == None %}
+                <p>No tip ;(</p>
+            {% else %}
+                <p>${{ request.tip }}</p>
+            {% endif %}
+                 
+            <h2><a class="article-title" href=" {% url 'driver-viewDetail' request.id %}">View This Ride!</a></h2>
+         </div>
+     {% endfor %}
+     {% elif not requestList%}   
+     <h2>You don't have any requests</h2>  
+{% endif %}
+
+
+
+{% endblock driverContent %}

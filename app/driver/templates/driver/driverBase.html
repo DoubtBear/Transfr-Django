@@ -1,0 +1,58 @@
+{% extends 'homepage/homepageBase.html' %}
+
+{% load static %}
+
+
+{% block sidebar %}
+<link rel="stylesheet" href="{% static 'css/driverBase.css'%}">
+
+        <div class="grid">
+            <div class="h-60 shadow-lg sidebar">
+            <aside>
+                <figure>
+                    <div class="avatar"><img class="rounded-circle text-center account-img d-flex avatar" src="{{request.user.profile.picture.url}}"></div>
+                    <figcaption id="userName">{{ request.user.first_name}} {{ request.user.last_name}}</figcaption>
+                </figure>
+                <!-- <img src="images/menu.svg"> -->
+                 <nav class="h-60 aside-nav2"> 
+                     <ul>
+                        <li class="aside-li">
+                            
+                            <a href=" {% url 'driver-rides' %}" class="aside-a">View Open Ride Requests</a>
+                        
+                        </li>
+                        <li class="aside-li">
+                            
+                            <a href="{% url 'driver-assigned' %}" class="aside-a">View Your Rides</a>
+                        
+                        </li>
+                        <li class="aside-li">
+                            
+                            <a href="{% url 'driver-payment' %}" class="aside-a">View Payment Summary</a>
+                        
+                        </li>
+                     </ul>
+                 </nav>
+            </aside>
+        </div>
+        
+        
+           
+        {% endblock sidebar %}
+            
+        
+            
+            {% block menuContent %}
+                
+            
+                
+            <main class="bg-light">
+                
+
+                {% block driverContent %}
+
+                {% endblock driverContent %}
+                
+            </main>
+        </div>
+        {% endblock menuContent %}

@@ -1,0 +1,193 @@
+body, html{
+  height: calc(100% - 2em);
+  margin: 0;
+}
+
+body{
+    margin: 0;
+    /* background color for home page of website */
+    background-color:  rgb(249, 252, 255);
+  }
+
+
+/* ---ASIDE------------------------------------------------------------------------------------------------------------- */
+/* Side bar */
+
+/* Menu button */
+img{
+  width: 40px;
+  cursor: pointer;
+}
+
+/* User profile */
+figure{
+  margin: 0;
+}
+
+/* Name of user */
+figcaption{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Nav for aside */
+.aside-nav2{
+  background-color: rgba(255,255,255,.35);
+  width: 10vh;
+  height: 30vh;
+
+  max-width: 380px;
+}
+
+/* When menu is clicked */
+.active{
+  position: absolute;
+  display: block;
+  background: #fff;
+  width: 50%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+/* ul for aside */
+.aside-nav2 ul{
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aside-li .aside-a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8em;
+  display: block;
+  padding: 1.5em 3em;
+  background-color: rgba(255,255,255,.35);
+  color: #000;
+  
+}
+
+/* main content area */
+main{
+  padding: 1em 1.4em;
+}
+
+h1{
+  margin: 0;
+}
+
+p{
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.request-btn{
+  background: #b60c0c;
+  color: rgb(255, 255, 250);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.request-btn:hover{
+  background: #e94848;
+  color: rgb(255, 255, 250);
+}
+
+
+  
+  /* ---LAPTOP SCREEN------------------------------------------------------------------------------------------------------------- */
+  @media only screen and (min-width: 768px) {
+    .grid{
+      display: grid;
+      grid-template-columns: 20% auto;
+      padding: 2em;
+    }
+
+    img{
+      display: none;
+    }
+    
+    aside{
+      
+      grid-template-columns: auto;
+      grid-template-rows: 20% auto;
+      padding: 0;
+      max-width: 370px;
+    }
+    
+    .sidebar{
+      background-color: rgb(218, 218, 218);
+    }
+    main{
+      padding: 4em;
+    }
+
+    .avatar{
+     
+     
+      width: 4rem;
+      height: 4rem;
+      margin: 2em auto 1em auto;
+    }
+
+    figure{
+      margin: 0;
+    }
+
+    figcaption{
+      text-align: center;
+      color: #000;
+    }
+
+  
+
+
+    .aside-ul .aside-li .aside-a{
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: .8em;
+      display: block;
+      padding: 1.5em 3em;
+      
+      font: #000;
+      width: 30em;
+      position: center;
+     
+    }
+
+    .aside-a:hover{
+      background: linear-gradient(200deg,lightseagreen,darkturquoise);
+      border-radius: 5px;
+    }
+
+    .aside-nav2{
+      background: rgba(255,255,255,.35);;
+      max-width: 370px;
+      width: 30em;
+      position: bottom;
+    }
+
+    h1{
+      font-size: 3em;
+      margin-top: 2em;
+    }
+
+   
+
+    .request-btn{
+      background: #b60c0c;
+      color: rgb(255, 255, 250);
+      font-weight: 600;
+      margin-top: 20px;
+  }
+  
+  .request-btn:hover{
+      background: #e94848;
+      color: rgb(255, 255, 250);
+  }
+
+    
+  }
+

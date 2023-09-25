@@ -1,0 +1,27 @@
+{% extends 'account/accountBase.html' %}
+{% load crispy_forms_tags %}
+{% block accountContent %}
+<div>
+        
+            
+    <form method="POST">
+        <div class="registerField">    
+
+        {% csrf_token %}
+
+        <fieldset class='form-group'>
+            <legend class="border-bottom mb-4">Update Profile Picture</legend>
+            {{ updateForm|crispy }}
+        </fieldset>
+        <div class="form-group" >
+            <div class="form-submit">
+            <button type='submit' class="btn btn-outline-info">Update Picture!</button>
+            </div>
+        </div>
+
+    </form>
+    
+    
+        </div>
+</div>
+{% endblock accountContent %}

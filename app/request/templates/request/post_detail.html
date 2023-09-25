@@ -1,0 +1,33 @@
+{% extends 'homepage/homepageBase.html' %}
+{% load static %}
+{% block content %}
+    <!-- linking css file -->
+    <link rel="stylesheet" href=" {% static 'css/requestBase.css' %}"/>
+
+    <article>
+        <div class="post-detailField">
+            <div>
+                <h1 class="header-request-c">Pending Ride</h1>
+                <small class="text-muted">When a driver accepts this ride, it will appear in your account settings.</small><br>
+                <small class="text-muted">Date Request Created: {{ object.date_created|date:"F d, Y"}}</small>
+            </div>
+            <div class="p-request">
+                
+                {% if not object.rider.first_name == '' and not object.rider.last_name == '' %}
+                <p><strong>Passenger: </strong>{{ object.rider.first_name }}  {{object.rider.last_name }}</p>
+                {% else %}
+                <p><strong>Passenger: </strong>{{ object.rider }}</p>
+                {% endif %}
+                    
+                
+                <p><strong>Date of Ride:</strong> {{ object.date }}</p>
+                <p><strong>Ride Destination:</strong> {{ object.destination }}</p>
+                <p><strong>Passenger Pickup Location:</strong> {{ object.riderLocation }}</p>
+                <p><strong>Additional Needs:</strong> {{ object.addSupport }}</p>
+            </div>
+
+            <a class="btn text-danger" href=" {% url 'delete-request' object.id %} " >Delete This Request</a>
+        </div>
+    </article>
+{% endblock content %}
+    

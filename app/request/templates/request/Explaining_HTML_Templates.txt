@@ -1,0 +1,10 @@
+The way templates work is you extend into the page you want by {% extends 'appName/TemplateYouWantToLoad.html' %}
+
+django will search the templates folder of every app, go into the app you call, and inject whatever you are coding
+into the template you called.
+
+To inject code, look at the template you want to inject into and find the {% block NameOfBlock %}
+In the template you are creating, make the same {% block NameOfBlock %} and end it with {% endblock NameOfBlock %}
+inside the block, add the html elements you want to appear, you can pass in objects to render, but that will require changing the
+views.py and passing an extra argument in. 
+I do this in the def viewRides in this views.py. I create a dictionary based of the database output, and pass it in as a third arguement

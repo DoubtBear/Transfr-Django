@@ -1,0 +1,19 @@
+{% extends 'driver/driverBase.html' %}
+{% load static %}
+
+
+
+    
+{% block driverContent %}
+    
+  <h1>Welcome to the payment view page</h1>
+
+  
+  {% if paymentObject %}
+      <h1>Account: {{ paymentObject.user.username }}</h1>
+      <p> Total Amount Expected for this payment window: ${{ paymentObject.dollars }}</p>
+  {% endif %}
+      
+        
+{% endblock driverContent %}
+    

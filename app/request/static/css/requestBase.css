@@ -1,0 +1,142 @@
+/* --- post_detail css ------------------------------------------------------- */
+/* styles the container/background for the ride request confirmation after submitting the form */
+.post-detailField{
+    max-width: 50vw;
+    font-family: 'Lexend-Medium', sans-serif;
+    background:  rgba(255, 255, 250, 0.774);
+    border: 2px solid rgb(233, 233, 224);
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+/* styles 'Ride Confirmation' header */
+.header-request-c{
+    font-family: 'Lexend-Bold', sans-serif;
+    font-weight: bolder;
+    color:rgb(77, 77, 77);
+    text-align: center;
+}
+
+/* styles 'Please keep a copy of this for your records.' and date that ride was requested */
+.text-muted{
+}
+
+/* styles the ride request summary */
+.p-request{
+    padding-top: 18px;
+    color:rgb(77, 77, 77);
+}
+
+/* --- post_form css ---------------------------------------------------------------------------- */
+/* styles the container/background for the request a ride form */
+.post-formField{
+    max-width: 50vw;
+    font-family: 'Lexend-Medium', sans-serif;
+    background:  rgba(255, 255, 250, 0.774);
+    border: 2px solid rgb(233, 233, 224);
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+/* styles the 'Submit Request!' button */
+.request-btn{
+    background: #b60c0c;
+    color: rgb(255, 255, 250);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.request-btn:hover{
+    background: #e94848;
+    color: rgb(255, 255, 250);
+}
+
+.form-submit{
+    right: 100%;
+}
+
+/* --- requestView css ---------------------------------------------------------------------------- */
+/* styles the containers/backgrounds for the pending requests */
+.date-destination{
+    max-width: 50vw;
+    font-family: 'Lexend-Medium', sans-serif;
+    background:  rgba(255, 255, 250, 0.774);
+    border: 2px solid rgb(233, 233, 224);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+/* styles the dates of the pending ride requests */
+.h1-request-view{
+    
+}
+
+/* styles the locations of the pending ride requests */
+.p-request-view{
+    
+}
+
+/* styles the 'You don't have any requests' message */
+.h2-request-view{
+    max-width: 50vw;
+    font-family: 'Lexend-Medium', sans-serif;
+    background:  rgba(255, 255, 250, 0.774);
+    border: 2px solid rgb(233, 233, 224);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
+    padding-left: 20px;
+    color:rgb(77, 77, 77); 
+}
+
+/* --- requestWelcome css ---------------------------------------------------------------------------- */
+/* styles the container/background for the request page welcome message */
+.request-welcomeField{
+    max-width: 70vw;
+    font-family: 'Lexend-Bold', sans-serif;
+    background:  rgba(255, 255, 250, 0.774);
+    border: 2px solid rgb(233, 233, 224);
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 100px;
+}
+
+/* styles 'Welcome to the Request Page!' */
+.h1-request-welcome{
+    text-align: center;
+    padding-bottom: 10px;
+    color:rgb(77, 77, 77); 
+}
+
+/* styles the two 'click here' links together */
+.click-here{
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* styles the two 'click here' links individually */
+.click-here a{
+    padding: 1vw;
+    color: #e94848;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.click-here a:hover{
+    color: #b60c0c;
+}

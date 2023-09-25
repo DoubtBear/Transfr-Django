@@ -1,0 +1,26 @@
+{% extends 'homepage/homepageBase.html' %}
+{% load static %}
+{% block content %}
+<!-- linking css file -->
+<link rel="stylesheet" href="{% static 'css/requestBase.css' %}"/>
+
+{% if requestList %}
+     
+     {% for request in requestList %}
+         <div class="date-destination">
+             <!-- **this page needs to be more robust add more later -->
+            <h1 class="h1-request-view"><a href=" {% url 'request-viewDetail' request.id %}">{{ request.date|date:"F d, Y" }}</a></h1>
+            <p class="p-request-view"><Strong>To: </Strong>{{ request.destination}}</p>
+         </div>
+     {% endfor %}
+   {% elif not requestList%}  
+   <!-- need to check if this looks right -->
+   <h2 class="h2-request-view">You don't have any requests</h2>    
+{% endif %}
+
+{% endblock content %}
+
+
+
+
+    

@@ -1,0 +1,58 @@
+{% extends 'homepage/homepageBase.html' %}
+
+{% load static %}
+
+
+{% block sidebar %}
+<link rel="stylesheet" href="{% static 'css/accountBase.css'%}">
+
+        <div class="grid">
+            <div class="h-60 shadow-lg sidebar">
+            <aside>
+                <figure>
+                    <div class="avatar"><a class="h-100 w-100 text-center d-block" href=" {% url 'profile-update' %} "><img class="rounded-circle text-center account-img d-flex avatar" src="{{ request.user.profile.picture.url }}"></a></div>
+                    <figcaption id="userName">{{ request.user.first_name}} {{ request.user.last_name}}</figcaption>
+                </figure>
+                <!-- <img src="images/menu.svg"> -->
+                 <nav class="h-60 aside-nav2"> 
+                     <ul>
+                        <li class="aside-li">
+                            
+                            <a href=" {% url 'account-home' %}" class="aside-a">View Account Summary</a>
+                        
+                        </li>
+                        <li class="aside-li">
+                            
+                            <a href="{% url 'account-update' %}" class="aside-a">Update Account Information</a>
+                        
+                        </li>
+                        <li class="aside-li">
+                            
+                            <a href="{% url 'account-requests' %}" class="aside-a">View Accepted Rides</a>
+                        
+                        </li>
+                     </ul>
+                 </nav>
+            </aside>
+        </div>
+        
+        
+           
+        {% endblock sidebar %}
+            
+        
+            
+            {% block menuContent %}
+                
+            
+                
+            <main class="bg-light">
+                
+
+                {% block accountContent %}
+
+                {% endblock accountContent %}
+                
+            </main>
+        </div>
+        {% endblock menuContent %}

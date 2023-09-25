@@ -1,0 +1,26 @@
+{% extends 'homepage/homepageBase.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <!-- linking css file -->
+    <link rel="stylesheet" href=" {% static 'css/requestBase.css' %} "/>
+
+    <div class="post-formField">
+        <form method="POST" onsubmit="return confirm('Are you sure you want to submit this request?')">   
+
+            {% csrf_token %}
+
+            <fieldset class='form-group'>
+                <legend class="border-bottom mb-4">Request a Ride</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group" >
+                <div class="form-submit">
+                    <small class="text-muted">Please ensure that all of the information above is correct before submitting.</small>
+                    <button type='submit' class="btn request-btn">Submit Request!</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,509 @@
+@font-face {
+    font-family: 'Palanquin Dark', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap'),
+        url('../../static/fonts/PalanquinDark-Medium.ttf') format('truetype'),
+        url('../../static/fonts/PalanquinDark-Regular.ttf') format('truetype'),
+        url('../../static/fonts/PalanquinDark-SemiBold.ttf') format('truetype'),
+        url('../../static/fonts/PalanquinDark-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+
+    font-family: 'Lexend', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap'),
+        url('../../static/fonts/Lexend-Medium.ttf') format('truetype'),
+        url('../../static/fonts/Lexend-Regular.ttf') format('truetype'),
+        url('../../static/fonts/Lexend-SemiBold.ttf') format('truetype'),
+        url('../../static/fonts/Lexend-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+ 
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media screen and (min-width: 769px) {
+/* for all screens larger than a tablet */
+/* -- homepage CSS ----------------------------------------------------------------------------------- */
+/* --- navbar ---------------------------------------------------------------------------------------- */
+/* style characteristics for the navigation bar */
+.navbar-general {
+  background-color:rgba(255, 255, 250, 0.815);
+  display: block;
+  box-shadow: 0px 10px 100px rgba(107, 107, 107, 0.247);
+  height: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* style characteristics for transfr logo/link in top left of website */
+.a-transfr-home{
+  text-decoration: none;
+  color: #b60c0c;
+  margin-bottom: 1vh;
+  margin-left: 4vh;
+  font-family: 'Palanquin Dark', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.2em;
+  display: inline-block;
+}
+
+.a-transfr-home:hover{
+  color: #e94848;
+}
+
+/* style characteristics for nav bar links */
+.a-nav-bar{
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  padding: 2vh;
+  padding-right: 3vw !important;
+  font-weight: bold;
+  display: inline-block;
+  align-items: center;
+  }
+
+/* turns links on the nav bar red when hovered over */
+.a-nav-bar:hover{
+  color: rgb(201, 0, 33);
+  }
+
+/* style characteristics for list of links that makes up navigation bar */
+.ul-navbar {
+  display: grid;
+  grid-template-columns: 1fr repeat(5, auto);
+  grid-column-gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-direction: column;
+  }
+ 
+/* style characteristics for each list item in navigation bar */
+.ul-navbar li{
+  margin: 0;
+  }
+
+/* creates a grid that organizes the navigation bar's links */
+.ul-navbar li:nth-child(1) { grid-column-start: 1; margin-right: auto;}
+.ul-navbar li:nth-child(4) { margin-left: auto;}
+}
+
+/* hamburger icon for dropdown menu */
+.menu-icon {
+  display: none;
+}
+
+#checkbox {
+  display: none;
+}
+
+.registerField{
+  max-width: 50vw;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* --- body content ---------------------------------------------------------------------------------- */
+html, body{
+  height: 100%;
+}
+  
+body{
+  margin: 0;
+  /* background color for home page of website */
+  background-color:  rgb(245, 250, 255);
+  font-family: 'Lexend', sans-serif;
+  overflow-x: hidden;
+  background-image: url(../images/oxford-styled-map.JPG);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  flex: 1 0 auto;
+  margin-top:auto;
+  margin-bottom: auto;
+}
+
+/* input */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: rgb(201, 0, 33);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  #9b1414;
+}
+  
+/* body text */
+/* general sizing for all images */
+.text-card-flex img{
+  max-width: 250px;
+  max-height: 250px;
+  pointer-events:none;
+}
+
+/* sizing for second image */
+.grandma-img{
+  max-height: 250px;
+  max-width: 400px !important;
+  float: left;
+}
+
+.grandma-img-2{
+  display: none;
+}
+
+/* outer div for text cards, sets them as flex rows to place the text and images side by side */
+.text-card-flex{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%; 
+  margin-right: 15%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  /* background color for text cards */
+  background-color: rgba(255, 255, 250, 0.774);
+  padding: 6vh;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.p-home{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color:rgb(77, 77, 77);
+}
+
+/* the question text */
+.p-home-intro{
+  font-weight: bold;
+  font-size: 2.2em;
+}
+
+/* the answer text */
+.p-home-info{
+  font-weight: 600;
+  font-size: 1em;
+  margin-left: 2vh;
+  margin-right: 2vh;
+} 
+
+/* --- contact css ------------------------------------------------------------------------------------ */
+.contact-body-text{
+  font-size: 2.8em;
+  text-align: center;
+  margin: 3em 2em;
+  font-weight: bolder;
+  color:rgb(77, 77, 77);
+  background-color: rgba(255, 255, 250, 0.774);
+  padding: 1em;
+}
+
+/* --- footer ----------------------------------------------------------------------------------------- */
+/* stylizing the footer */
+footer{
+  flex-shrink: 0;
+}
+
+.footerBar{
+  bottom: 0px;
+  padding: 2vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-size: .9em;
+  }
+
+/* displays footer links side by side */
+.footer-links-flex{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.5vh;
+  }
+
+/* styles footer links (contact and aboout us) */
+.footer-links{
+  text-decoration: none;
+  color: white;
+  padding-right: 2.5vh;
+  padding-top: 1.5vh;
+  font-weight: bold;
+  }
+
+.footer-links:hover{
+    color: white;
+  }
+
+/* displays email text side by side */
+.footer-text-flex{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.5vh;
+  }
+
+/* styles for email text */
+.footer-text{
+  padding-right: 2.5vh;
+  padding-top: 1.5vh;
+  }
+
+/* about us css --------------------------------------------------- */
+  .text-card-about{
+    margin-left: 15%; 
+    margin-right: 15%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* background color for text cards */
+    background-color: rgba(255, 255, 250, 0.774);
+    padding: 6vh;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+  @media screen and (max-width: 925px) {
+    .email{
+      font-size: .7em;
+    }
+  } 
+
+/* media for screens tablet-size and smaller */
+  @media screen and (max-width: 769px) {
+    /* style characteristics for the navigation bar */
+    .navbar-general {
+      background-color:rgba(255, 255, 250, 0.815);
+      display: block;
+      box-shadow: 0px 10px 100px rgba(107, 107, 107, 0.247);
+      height: auto;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* puts the transfr logo and hamburger icon both on navbar, vertically centered */
+    .navbar-mobile{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* styling for transfr logo */
+    .a-transfr-home{
+      text-decoration: none;
+      color: #b60c0c;
+      margin-bottom: 1vh;
+      margin-left: 4vh;
+      font-family: 'Palanquin Dark', sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 2em;
+      display: inline-block;
+    }
+    
+    .a-transfr-home:hover{
+      color: #e94848;
+    }
+
+    /* style characteristics for nav bar links */
+    .a-nav-bar{
+      display: none;
+      }
+
+    /* style characteristics for list of links that makes up navigation bar */
+    .ul-navbar {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      }
+
+    /* styling hamburger icon for mobile dropdown menu */
+    .menu-icon{
+      text-decoration: none;
+      color: rgb(48, 48, 48);
+      padding-right: 5vw;
+      font-weight: bold;
+      display: inline;
+      align-items: center;
+      margin: 0;
+      }
+
+    /* style characteristics for each list item in navigation bar */
+    .ul-navbar li{
+      margin: 0;
+      }
+
+    /* creates a grid that organizes the navigation bar's links */
+    .ul-navbar li:nth-child(1) { grid-column-start: 1; margin-right: auto;}
+    .ul-navbar li:nth-child(4) { margin-left: auto;}
+    
+    /* shows and styles the menu when the hamburger icon is clicked (aka checkbox is checked) */
+    #checkbox:checked ~ .navbar-general .ul-navbar .a-nav-bar {
+      display: flex;
+      flex-direction: column !important;
+      margin-left: 2.5vh;
+      transition: all 0.5s;
+      padding-bottom: 1.5em;
+      height: auto;
+
+      text-decoration: none;
+      color: rgb(48, 48, 48);
+      padding: 2vh;
+      font-weight: bold;
+    }
+   
+    /* ---- register form ----------- */
+    /* input */
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: rgb(201, 0, 33);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color:  #9b1414;
+    }
+      
+    /* ---- body content --------------*/
+    /* outer div for text cards, sets them as flex rows to place the text and images side by side */
+    .text-card-flex{
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%; 
+      margin-right: 10%;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+      /* background color for text cards */
+      background-color: rgba(255, 255, 250, 0.774);
+      padding: 5vw;
+      text-align: center;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    /* general sizing for all images */
+    .text-card-flex img{
+      max-width: 20vw;
+      max-height: 20vw;
+      pointer-events:none;
+    }
+
+    .patient-img{
+      /* margin-top: 14vw; */
+    }
+
+    /* hides original grandma image */
+    .grandma-img{
+      display: none;
+    }
+
+    /* reveals new grandma image in different place in the html */
+    .grandma-img-2{
+      display: initial;
+      max-height: 200px;
+      max-width: 290px !important;
+    }
+
+    .insurance-img{
+      /* margin-top: 1vw; */
+    }
+
+    .p-home{
+      /* height: 140px; */
+    }
+
+    /* the question text */
+    .p-home-intro{
+      font-weight: bold;
+      font-size: 5.0vw;
+      color:rgb(77, 77, 77);
+      text-align: center;
+      margin: 0;
+      padding-top: 0px;
+    }
+
+    /* the answer text */
+    .p-home-info{
+      font-weight: 600;
+      font-size: 2.5vw;
+      color:rgb(77, 77, 77);
+      text-align: center !important;
+      float: right;
+      margin-left: 2vh;
+      margin-right: 2vh;
+      margin-top: 1vh;
+    } 
+
+    /* --- contact css ------------------------------------------------------------------------------------ */
+    .contact-body-text{
+      font-size: 2em;
+      text-align: center;
+      margin: 2em 1em;
+      font-weight: bolder;
+      color:rgb(77, 77, 77);
+      background-color: rgba(255, 255, 250, 0.774);
+      padding: 1em;
+    }
+
+    .email{
+      font-size: .5em;
+      text-align: center;
+    }
+
+  }
+  

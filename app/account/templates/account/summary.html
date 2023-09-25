@@ -1,0 +1,22 @@
+{% extends 'account/accountBase.html' %}
+{% block accountContent %}
+
+<!-- this is html from firebase project to use as a guide -->
+<div id="viewAccountSummarySection">
+    <h class="acc-summary-h">Account Summary</h>
+    <section class="acc-summary-text" id="showAccDetails">
+        <div><p>Name:</p><p>{{ request.user.first_name}} {{ request.user.last_name}}</p></div>
+        <div><p>Email:</p><p>{{ request.user.email }}</p></div>
+        <div><p>Phone:</p><p> ------------------------ </p></div>
+    </section>
+</div>
+
+<!-- ---------------------------------------------------- -->
+    <p>This is where a summary would be</p>
+    <p>Gotta make the database first tho lmao</p>
+
+
+    
+        <a class="btn text-danger" href=" {% url 'delete-account' request.user.pk %} " >Delete Your Account</a>
+    
+{% endblock accountContent %}

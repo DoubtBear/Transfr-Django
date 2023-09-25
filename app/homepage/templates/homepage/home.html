@@ -1,0 +1,55 @@
+{% extends 'homepage/homepageBase.html' %}
+
+<!-- This file holds the main text for the homepage. --------------------------------------------------------------------------->
+
+{% block content %}
+    <div id="normalDisplay">
+    <!-- Who Are We? ------------------------------------------>
+        <div class="text-card-flex">
+            <div class="p-home">
+                <p class="p-home-intro">
+                    Who Are We?
+                </p>
+                <script>
+                    console.log('{{request.user.password}}')
+                </script>
+                <p class="p-home-info">
+                    
+                    Transfr allows you to easily schedule rides to and from medical appointments within the Oxford, MS area. We pair you
+                    with qualified drivers who are well-trained in safe transportation services and
+                    guaranteed to get to your destination on time.
+                </p>
+            </div>
+            <img class="patient-img" src="../../static/images/doctor-patient.png">
+        </div>
+
+    <!-- How Does It Work? ------------------------------------>
+        <div class="text-card-flex">
+            <img class="grandma-img" src="../../static/images/grandma-laptop.png">
+            <div class="p-home">
+                <p class="p-home-intro">
+                    How Does It Work?
+                </p>
+                <p class="p-home-info">
+                    Create an account or log in, and then click the
+                    'Request a Ride' tab. Fill out the form, and we will 
+                    assign a driver to you for your scheduled day and time.
+                </p>
+            </div>
+            <img class="grandma-img-2" src="../../static/images/grandma-laptop.png">
+        </div>
+
+    <!-- What Does It Cost? ----------------------------------->
+        <div class="text-card-flex">
+            <div class="p-home">
+                <p class="p-home-intro">
+                    What Does It Cost?
+                </p>
+                <p class="p-home-info">
+                    Pricing will be managed through your insurance. No co-pay required.
+                </p>
+            </div>
+            <img class="insurance-img" src="../../static/images/man-insurance.png">
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'driver/driverBase.html' %}
+{% load crispy_forms_tags %}
+{% block driverContent %}
+<div>
+    
+    <h>Select Your Milage</h>
+    <h1>{{ rideObject.destination }}</h1>
+            
+    <form method="POST">
+        <div class="registerField">    
+
+        {% csrf_token %}
+
+        <fieldset class='form-group'>
+            <legend class="border-bottom mb-4">Update Account Information</legend>
+            {{ paymentForm|crispy }}
+        </fieldset>
+        <div class="form-group" >
+            <div class="form-submit">
+            <button type='submit' class="btn btn-outline-info">Update Account!</button>
+            </div>
+        </div>
+
+    </form>
+    
+    
+        </div>
+</div>
+{% endblock driverContent %}

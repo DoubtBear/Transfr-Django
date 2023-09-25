@@ -1,0 +1,17 @@
+{% extends 'account/accountBase.html' %}
+{% block accountContent %}
+<h class="acc-rides-h">View Pending Rides</h>
+    {% if assignedRides %}
+        
+        
+        {% for ride in assignedRides  %}
+        <div class="acc-rides-text">
+            <h1>{{ ride.destination }}</h1>
+            <p>{{ ride.date|date:"F d, Y"}}</p>
+        </div>
+        {% endfor %}
+            
+
+    {% endif %}
+        
+{% endblock accountContent %}

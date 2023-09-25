@@ -1,0 +1,16 @@
+{% extends 'homepage/homepageBase.html' %}
+{% load static %}
+{% block content %}
+    <!-- linking css file -->
+    <link rel="stylesheet" href=" {% static 'css/requestBase.css' %}"/>
+
+    <div class="request-welcomeField">
+        <!-- will probably change this css later -->
+        <h1 class="h1-request-welcome"><strong>Welcome to the Request Page!</strong></h1>
+        <div class="click-here">
+            <a href="{% url 'request-form' %}"><strong>Click Here to Create A Request</strong></a>
+            <a href="{% url 'request-view' %}"><strong>Click Here to View Pending Requests</strong></a>
+        </div>
+    </div>
+{% endblock content %}
+    

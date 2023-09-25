@@ -1,0 +1,19 @@
+{% extends 'homepage/homepageBase.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <!-- linking css file -->
+    <link rel="stylesheet" href=" {% static '/css/user.css' %}" />;
+
+    <div class="log-out-page">
+        
+        <h1 class="h1-log-out">You have been Logged Out. Very Sad...</h1>
+
+        <div class="log-out-mssg">
+            <small class="text-muted">
+                <span class="wanna-come-back">Wanna come back?</span> 
+                <a class="login-here" href="{% url 'login' %}">Login Here!</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
