@@ -27,8 +27,14 @@ Open your browser and navagate to localhost:8000
 
 
 
+Screenshots of site:
 
-
+Home Page:
 ![Screenshot](homepage.png)
+
+Request a ride hub:
 ![Screenshot](request.png)
+
+
+Viewing a ride that has been requested:
 ![Screenshot](viewrequest.png)
